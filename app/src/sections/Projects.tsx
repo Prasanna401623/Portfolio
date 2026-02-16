@@ -35,6 +35,14 @@ const projects: Project[] = [
     image: '/project_maze_v2.png',
     link: 'https://prasannajha401.itch.io/loops',
   },
+  {
+    id: 'nepunite',
+    title: 'NepUnite',
+    description: 'Community web platform with a Housing module supporting listings and user interaction. Contributed to frontend and backend development, ensuring smooth integration and a user-friendly experience.',
+    tags: ['Full-Stack', 'React', 'Community', 'Web Platform'],
+    image: '/project_nepUnite.png',
+    link: 'https://www.nepunite.com',
+  },
 ];
 
 interface ProjectCardProps {
