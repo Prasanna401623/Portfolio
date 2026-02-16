@@ -16,7 +16,7 @@ const projects: Project[] = [
     title: 'Carbon Horizon',
     description: 'AI-powered climate platform for emissions tracking and CCUS insights. Built with React and Python, featuring real-time data visualization and anomaly detection.',
     tags: ['React', 'Python', 'AI/ML', 'Data Viz'],
-    image: '/project_carbon_v2.jpg',
+    image: '/project_carbon_v2.png',
     link: 'https://news.nexusla.org/431568-university-of-louisiana-at-monroe-team-wins-nexus-louisianas-devdays-climatetech-challenge',
   },
   {
@@ -24,7 +24,7 @@ const projects: Project[] = [
     title: 'NoteLinkAI',
     description: 'AI learning platform with smart notes and study assistance. Leverages OpenAI API for intelligent content generation and summarization.',
     tags: ['Next.js', 'TypeScript', 'OpenAI', 'PostgreSQL'],
-    image: '/project_notelink_v2.jpg',
+    image: '/project_notelink_v2.png',
     link: 'https://notelinkai.com',
   },
   {
@@ -32,7 +32,7 @@ const projects: Project[] = [
     title: 'Escape the Virtual Maze',
     description: 'Educational visual novel game teaching programming and cybersecurity concepts through interactive storytelling and decision-based gameplay.',
     tags: ["Ren'Py", 'Game Dev', 'Education', 'Python'],
-    image: '/project_maze_v2.jpg',
+    image: '/project_maze_v2.png',
     link: 'https://prasannajha401.itch.io/loops',
   },
 ];
