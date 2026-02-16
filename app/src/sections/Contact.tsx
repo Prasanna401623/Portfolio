@@ -55,10 +55,9 @@ export default function Contact() {
     <div ref={sectionRef} className="relative px-6 lg:px-12">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div 
-          className={`text-center mb-12 lg:mb-16 transition-all duration-700 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
+        <div
+          className={`text-center mb-12 lg:mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
         >
           <span className="font-mono text-sm text-[#6366F1] tracking-widest uppercase">
             Contact
@@ -73,16 +72,15 @@ export default function Contact() {
 
         <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
           {/* Contact Form */}
-          <div 
-            className={`lg:col-span-3 transition-all duration-700 delay-200 ${
-              isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
-            }`}
+          <div
+            className={`lg:col-span-3 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
+              }`}
           >
             <form onSubmit={handleSubmit} className="glass-card p-6 lg:p-8">
               <div className="space-y-6">
                 <div>
-                  <label 
-                    htmlFor="name" 
+                  <label
+                    htmlFor="name"
                     className="block font-mono text-sm text-[#A1A1AA] mb-2"
                   >
                     Name
@@ -100,8 +98,8 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label 
-                    htmlFor="email" 
+                  <label
+                    htmlFor="email"
                     className="block font-mono text-sm text-[#A1A1AA] mb-2"
                   >
                     Email
@@ -119,8 +117,8 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label 
-                    htmlFor="message" 
+                  <label
+                    htmlFor="message"
                     className="block font-mono text-sm text-[#A1A1AA] mb-2"
                   >
                     Message
@@ -158,15 +156,14 @@ export default function Contact() {
           </div>
 
           {/* Contact Info */}
-          <div 
-            className={`lg:col-span-2 transition-all duration-700 delay-400 ${
-              isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
-            }`}
+          <div
+            className={`lg:col-span-2 transition-all duration-700 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
+              }`}
           >
             <div className="space-y-4">
               {/* Email */}
-              <a 
-                href="mailto:prasanna@email.edu"
+              <a
+                href="mailto:Prasannajha623401@gmail.com"
                 className="glass-card p-5 flex items-center gap-4 group hover:bg-[#6366F1]/10 transition-colors"
               >
                 <div className="w-12 h-12 rounded-xl bg-[#6366F1]/20 flex items-center justify-center">
@@ -175,14 +172,14 @@ export default function Contact() {
                 <div>
                   <div className="font-mono text-xs text-[#71717A] mb-1">Email</div>
                   <div className="text-[#FAFAFA] group-hover:text-[#6366F1] transition-colors">
-                    prasanna@email.edu
+                    Prasannajha623401@gmail.com
                   </div>
                 </div>
               </a>
 
               {/* GitHub */}
-              <a 
-                href="https://github.com/prasannajha"
+              <a
+                href="https://github.com/Prasanna401623"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="glass-card p-5 flex items-center gap-4 group hover:bg-[#8B5CF6]/10 transition-colors"
@@ -193,14 +190,14 @@ export default function Contact() {
                 <div>
                   <div className="font-mono text-xs text-[#71717A] mb-1">GitHub</div>
                   <div className="text-[#FAFAFA] group-hover:text-[#8B5CF6] transition-colors">
-                    github.com/prasannajha
+                    github.com/Prasanna401623
                   </div>
                 </div>
               </a>
 
               {/* LinkedIn */}
-              <a 
-                href="https://linkedin.com/in/prasannajha"
+              <a
+                href="https://www.linkedin.com/in/prasannajha401/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="glass-card p-5 flex items-center gap-4 group hover:bg-[#6366F1]/10 transition-colors"
@@ -211,7 +208,7 @@ export default function Contact() {
                 <div>
                   <div className="font-mono text-xs text-[#71717A] mb-1">LinkedIn</div>
                   <div className="text-[#FAFAFA] group-hover:text-[#6366F1] transition-colors">
-                    linkedin.com/in/prasannajha
+                    linkedin.com/in/prasannajha401
                   </div>
                 </div>
               </a>

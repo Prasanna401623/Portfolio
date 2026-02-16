@@ -42,10 +42,9 @@ export default function Footer({ onNavigate }: FooterProps) {
       className="relative py-16 lg:py-24 px-6 lg:px-12"
     >
       <div className="max-w-6xl mx-auto">
-        <div 
-          className={`transition-all duration-700 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
+        <div
+          className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
         >
           {/* Main Content */}
           <div className="text-center mb-12">
@@ -53,7 +52,7 @@ export default function Footer({ onNavigate }: FooterProps) {
             <h2 className="font-heading text-[clamp(2.5rem,6vw,4rem)] font-bold text-[#FAFAFA] mb-4">
               Prasanna<span className="text-[#6366F1]">.</span>
             </h2>
-            
+
             <p className="text-[#A1A1AA] max-w-md mx-auto mb-8">
               Building the future, one line of code at a time.
             </p>
@@ -73,24 +72,24 @@ export default function Footer({ onNavigate }: FooterProps) {
 
             {/* Social Links */}
             <div className="flex justify-center gap-4">
-              <a 
-                href="https://github.com/prasannajha"
+              <a
+                href="https://github.com/Prasanna401623"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-[#FAFAFA]/5 border border-[#FAFAFA]/10 flex items-center justify-center text-[#A1A1AA] hover:text-[#FAFAFA] hover:bg-[#6366F1]/20 hover:border-[#6366F1]/30 transition-all"
               >
                 <Github size={18} />
               </a>
-              <a 
-                href="https://linkedin.com/in/prasannajha"
+              <a
+                href="https://www.linkedin.com/in/prasannajha401/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-[#FAFAFA]/5 border border-[#FAFAFA]/10 flex items-center justify-center text-[#A1A1AA] hover:text-[#FAFAFA] hover:bg-[#8B5CF6]/20 hover:border-[#8B5CF6]/30 transition-all"
               >
                 <Linkedin size={18} />
               </a>
-              <a 
-                href="mailto:prasanna@email.edu"
+              <a
+                href="mailto:Prasannajha623401@gmail.com"
                 className="w-10 h-10 rounded-full bg-[#FAFAFA]/5 border border-[#FAFAFA]/10 flex items-center justify-center text-[#A1A1AA] hover:text-[#FAFAFA] hover:bg-[#6366F1]/20 hover:border-[#6366F1]/30 transition-all"
               >
                 <Mail size={18} />
