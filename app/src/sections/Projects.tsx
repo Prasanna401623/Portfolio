@@ -43,6 +43,14 @@ const projects: Project[] = [
     image: '/project_nepUnite.png',
     link: 'https://www.nepunite.com',
   },
+  {
+    id: 'saferoute',
+    title: 'SafeRoute',
+    description: 'Full-stack mobile safety and crime intelligence app built with React Native (Expo SDK 54) and Django REST Framework. Features real-time GPS-based risk scoring using Haversine distance, time-decay weighting, and NLP severity classification, with automated crime data ingestion via OpenAI GPT and BeautifulSoup.',
+    tags: ['React Native', 'Django', 'OpenAI API', 'Google Maps'],
+    image: '/project_saferoute.png',
+    link: 'https://github.com/Prasanna401623/SafeRoute',
+  },
 ];
 
 interface ProjectCardProps {
