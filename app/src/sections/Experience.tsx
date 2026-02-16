@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { ExternalLink } from 'lucide-react';
 
 interface ExperienceItem {
   id: string;
@@ -6,6 +7,7 @@ interface ExperienceItem {
   company: string;
   period: string;
   description: string;
+  link?: string;
 }
 
 const experiences: ExperienceItem[] = [
@@ -15,6 +17,7 @@ const experiences: ExperienceItem[] = [
     company: 'GDSC ULM',
     period: 'Aug 2025 – Present',
     description: 'Leading technical workshops and mentoring developers. Organizing hackathons and coding challenges, ensuring technical readiness for events like TechExpo.',
+    link: 'https://gdsculm.org',
   },
   {
     id: 'hawkeye',
@@ -22,6 +25,7 @@ const experiences: ExperienceItem[] = [
     company: 'The Hawkeye',
     period: 'Fall 2024 – Present',
     description: 'Managing the student newspaper website on SNO WordPress platform. Improving accessibility, customizing navigation, and streamlining publishing workflows.',
+    link: 'https://ulmhawkeyeonline.com/staff_name/prasanna-jha/',
   },
   {
     id: 'tutor',
@@ -29,6 +33,7 @@ const experiences: ExperienceItem[] = [
     company: 'Student Success Center',
     period: 'Jan 2025 – Present',
     description: 'Teaching mathematics and physics courses with adaptive explanations. Supporting students through guided problem-solving and exam preparation.',
+    link: 'https://www.ulm.edu/studentsuccess/tutoring.html',
   },
   {
     id: 'medicross',
@@ -71,12 +76,11 @@ function ExperienceCard({ experience, index, isLeft }: ExperienceCardProps) {
       className={`relative flex items-center ${isLeft ? 'lg:flex-row' : 'lg:flex-row-reverse'} flex-col lg:items-stretch gap-8 lg:gap-0`}
     >
       {/* Content Card */}
-      <div 
-        className={`lg:w-[45%] transition-all duration-700 ${
-          isVisible 
-            ? 'opacity-100 translate-x-0' 
+      <div
+        className={`lg:w-[45%] transition-all duration-700 ${isVisible
+            ? 'opacity-100 translate-x-0'
             : `opacity-0 ${isLeft ? '-translate-x-12' : 'translate-x-12'}`
-        }`}
+          }`}
         style={{ transitionDelay: `${index * 150}ms` }}
       >
         <div className="glass-card p-6 lg:p-8 h-full">
@@ -84,18 +88,39 @@ function ExperienceCard({ experience, index, isLeft }: ExperienceCardProps) {
             <h3 className="font-heading text-lg lg:text-xl font-semibold text-[#FAFAFA]">
               {experience.role}
             </h3>
+            {experience.link && (
+              <a
+                href={experience.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-7 h-7 rounded-full bg-[#6366F1]/20 flex items-center justify-center text-[#6366F1] hover:bg-[#6366F1] hover:text-white transition-all"
+              >
+                <ExternalLink size={14} />
+              </a>
+            )}
           </div>
-          
+
           <div className="flex flex-wrap items-center gap-2 mb-4">
-            <span className="text-[#6366F1] font-mono text-sm">
-              {experience.company}
-            </span>
+            {experience.link ? (
+              <a
+                href={experience.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#6366F1] font-mono text-sm hover:underline transition-all"
+              >
+                {experience.company}
+              </a>
+            ) : (
+              <span className="text-[#6366F1] font-mono text-sm">
+                {experience.company}
+              </span>
+            )}
             <span className="text-[#71717A]">•</span>
             <span className="text-[#71717A] font-mono text-sm">
               {experience.period}
             </span>
           </div>
-          
+
           <p className="text-[#A1A1AA] text-sm leading-relaxed">
             {experience.description}
           </p>
@@ -105,10 +130,9 @@ function ExperienceCard({ experience, index, isLeft }: ExperienceCardProps) {
       {/* Timeline Center */}
       <div className="hidden lg:flex lg:w-[10%] justify-center relative">
         <div className="w-px h-full bg-gradient-to-b from-[#6366F1]/50 via-[#8B5CF6]/50 to-[#6366F1]/50" />
-        <div 
-          className={`absolute top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#6366F1] border-4 border-[#0F0F12] transition-all duration-500 ${
-            isVisible ? 'scale-100' : 'scale-0'
-          }`}
+        <div
+          className={`absolute top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#6366F1] border-4 border-[#0F0F12] transition-all duration-500 ${isVisible ? 'scale-100' : 'scale-0'
+            }`}
           style={{ transitionDelay: `${index * 150 + 200}ms` }}
         />
       </div>
@@ -143,11 +167,10 @@ export default function Experience() {
     <div className="relative px-6 lg:px-12">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
-        <div 
+        <div
           ref={titleRef}
-          className={`text-center mb-12 lg:mb-16 transition-all duration-700 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}
+          className={`text-center mb-12 lg:mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
         >
           <span className="font-mono text-sm text-[#6366F1] tracking-widest uppercase">
             Journey
@@ -163,9 +186,9 @@ export default function Experience() {
         {/* Timeline */}
         <div className="space-y-8 lg:space-y-0">
           {experiences.map((experience, index) => (
-            <ExperienceCard 
-              key={experience.id} 
-              experience={experience} 
+            <ExperienceCard
+              key={experience.id}
+              experience={experience}
               index={index}
               isLeft={index % 2 === 0}
             />
