@@ -4,13 +4,6 @@ import { Send, Github, Linkedin, Mail, MapPin } from 'lucide-react';
 export default function Contact() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -28,29 +21,6 @@ export default function Contact() {
     return () => observer.disconnect();
   }, []);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-
-    setIsSubmitting(false);
-    setSubmitted(true);
-    setFormData({ name: '', email: '', message: '' });
-
-    setTimeout(() => setSubmitted(false), 3000);
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
-  };
-
   return (
     <div ref={sectionRef} className="relative px-6 lg:px-12">
       <div className="max-w-6xl mx-auto">
@@ -66,93 +36,34 @@ export default function Contact() {
             Let's <span className="text-gradient">Work Together</span>
           </h2>
           <p className="text-[#A1A1AA] mt-4 max-w-2xl mx-auto">
-            Have a project in mind? I'd love to hear about it. Send me a message and I'll respond within 2-3 days.
+            Have a project in mind? I'd love to hear about it. Drop me an email and I'll respond within 2-3 days.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
-          {/* Contact Form */}
+          {/* Contact Me Card */}
           <div
             className={`lg:col-span-3 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
               }`}
           >
-            <form onSubmit={handleSubmit} className="glass-card p-6 lg:p-8">
-              <div className="space-y-6">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block font-mono text-sm text-[#A1A1AA] mb-2"
-                  >
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-[#FAFAFA]/5 border border-[#FAFAFA]/10 rounded-xl text-[#FAFAFA] placeholder-[#71717A] focus:border-[#6366F1] focus:outline-none transition-colors"
-                    placeholder="Your name"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block font-mono text-sm text-[#A1A1AA] mb-2"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-[#FAFAFA]/5 border border-[#FAFAFA]/10 rounded-xl text-[#FAFAFA] placeholder-[#71717A] focus:border-[#6366F1] focus:outline-none transition-colors"
-                    placeholder="your@email.com"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block font-mono text-sm text-[#A1A1AA] mb-2"
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={5}
-                    className="w-full px-4 py-3 bg-[#FAFAFA]/5 border border-[#FAFAFA]/10 rounded-xl text-[#FAFAFA] placeholder-[#71717A] focus:border-[#6366F1] focus:outline-none transition-colors resize-none"
-                    placeholder="Tell me about your project..."
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full btn-primary flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isSubmitting ? (
-                    'Sending...'
-                  ) : submitted ? (
-                    'Message Sent!'
-                  ) : (
-                    <>
-                      Send Message
-                      <Send size={16} />
-                    </>
-                  )}
-                </button>
+            <div className="glass-card p-8 lg:p-10 flex flex-col items-center justify-center text-center h-full">
+              <div className="w-20 h-20 rounded-2xl bg-[#6366F1]/20 flex items-center justify-center mb-6">
+                <Mail size={36} className="text-[#6366F1]" />
               </div>
-            </form>
+              <h3 className="font-heading text-2xl font-semibold text-[#FAFAFA] mb-3">
+                Get In Touch
+              </h3>
+              <p className="text-[#A1A1AA] mb-8 max-w-md">
+                Interested in working together or have a question? Click below to send me an email directly.
+              </p>
+              <a
+                href="mailto:Prasannajha623401@gmail.com"
+                className="btn-primary inline-flex items-center gap-2 px-8 py-3"
+              >
+                Contact Me
+                <Send size={16} />
+              </a>
+            </div>
           </div>
 
           {/* Contact Info */}
