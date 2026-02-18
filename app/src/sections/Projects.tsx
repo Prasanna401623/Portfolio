@@ -17,7 +17,7 @@ const projects: Project[] = [
     description: 'AI-powered climate platform for emissions tracking and CCUS insights. Built with React and Python, featuring real-time data visualization and anomaly detection.',
     tags: ['React', 'Python', 'AI/ML', 'Data Viz'],
     image: '/project_carbon_v2.png',
-    link: 'https://news.nexusla.org/431568-university-of-louisiana-at-monroe-team-wins-nexus-louisianas-devdays-climatetech-challenge',
+    link: 'https://www.ulm.edu/news/2025/comp_science_devdays_111125.html',
   },
   {
     id: 'notelinkai',
