@@ -10,6 +10,7 @@ interface NavigationProps {
 const navItems = [
   { id: 'projects', label: 'Work' },
   { id: 'experience', label: 'Experience' },
+  { id: 'achievements', label: 'Achievements' },
   { id: 'skills', label: 'Skills' },
   { id: 'contact', label: 'Contact' },
 ];
@@ -25,15 +26,13 @@ export default function Navigation({ activeSection, onNavigate, scrolled }: Navi
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
             ? 'py-4'
             : 'py-6'
-        }`}
+          }`}
       >
-        <div className={`mx-4 lg:mx-8 transition-all duration-500 ${
-          scrolled ? 'glass-card-strong py-3 px-6' : 'py-0 px-0'
-        }`}>
+        <div className={`mx-4 lg:mx-8 transition-all duration-500 ${scrolled ? 'glass-card-strong py-3 px-6' : 'py-0 px-0'
+          }`}>
           <div className="flex items-center justify-between">
             {/* Logo */}
             <button
@@ -49,11 +48,10 @@ export default function Navigation({ activeSection, onNavigate, scrolled }: Navi
                 <button
                   key={item.id}
                   onClick={() => handleNavClick(item.id)}
-                  className={`font-mono text-sm tracking-wide transition-all link-underline ${
-                    activeSection === item.id
+                  className={`font-mono text-sm tracking-wide transition-all link-underline ${activeSection === item.id
                       ? 'text-[#6366F1]'
                       : 'text-[#A1A1AA] hover:text-[#FAFAFA]'
-                  }`}
+                    }`}
                 >
                   {item.label}
                 </button>
@@ -74,9 +72,8 @@ export default function Navigation({ activeSection, onNavigate, scrolled }: Navi
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 z-40 bg-[#0F0F12]/98 backdrop-blur-xl transition-all duration-500 md:hidden ${
-          isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-        }`}
+        className={`fixed inset-0 z-40 bg-[#0F0F12]/98 backdrop-blur-xl transition-all duration-500 md:hidden ${isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+          }`}
       >
         <div className="flex flex-col items-center justify-center h-full gap-8">
           {navItems.map((item, index) => (
@@ -84,7 +81,7 @@ export default function Navigation({ activeSection, onNavigate, scrolled }: Navi
               key={item.id}
               onClick={() => handleNavClick(item.id)}
               className="font-heading text-3xl font-semibold text-[#FAFAFA] hover:text-gradient transition-all"
-              style={{ 
+              style={{
                 transitionDelay: isMobileMenuOpen ? `${index * 100}ms` : '0ms',
                 opacity: isMobileMenuOpen ? 1 : 0,
                 transform: isMobileMenuOpen ? 'translateY(0)' : 'translateY(20px)'

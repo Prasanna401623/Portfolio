@@ -4,6 +4,7 @@ import Hero from './sections/Hero';
 import About from './sections/About';
 import Projects from './sections/Projects';
 import Experience from './sections/Experience';
+import Achievements from './sections/Achievements';
 import Skills from './sections/Skills';
 import Contact from './sections/Contact';
 import Footer from './sections/Footer';
@@ -56,7 +57,7 @@ function App() {
     <div className="relative min-h-screen bg-[#0F0F12]">
       {/* Background Gradient */}
       <div className="fixed inset-0 bg-gradient-main pointer-events-none" />
-      
+
       {/* Floating Gradient Orbs */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="gradient-orb w-[600px] h-[600px] bg-[#6366F1] top-[-200px] right-[-100px] animate-float" />
@@ -65,8 +66,8 @@ function App() {
       </div>
 
       {/* Navigation */}
-      <Navigation 
-        activeSection={activeSection} 
+      <Navigation
+        activeSection={activeSection}
         onNavigate={scrollToSection}
         scrolled={scrolled}
       />
@@ -84,6 +85,9 @@ function App() {
         </section>
         <section id="experience" className="py-24 lg:py-32">
           <Experience />
+        </section>
+        <section id="achievements" className="py-24 lg:py-32">
+          <Achievements />
         </section>
         <section id="skills" className="py-24 lg:py-32">
           <Skills />
