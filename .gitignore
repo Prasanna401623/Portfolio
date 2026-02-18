@@ -31,3 +31,6 @@ npm-debug.log*
 vite.config.ts.timestamp-*
 
 ../package-lock.json
+
+# Design docs
+Design_v2.md
