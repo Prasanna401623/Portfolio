@@ -1,73 +1,17 @@
-# React + TypeScript + Vite
+# Prasanna Jha — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, dark-themed personal portfolio built with **React**, **TypeScript**, and **Vite**. The site showcases my work as a Computer Science student and full-stack developer at the University of Louisiana at Monroe, featuring smooth scroll-triggered animations powered by **Framer Motion**, glassmorphism UI elements, and a responsive layout designed for all screen sizes.
 
-Currently, two official plugins are available:
+The portfolio highlights featured projects — including **Carbon Horizon** (an AI-powered climate platform), **NoteLinkAI** (an AI learning tool), **SafeRoute** (a mobile safety app), **NepUnite** (a community web platform), and **Escape the Virtual Maze** (an educational visual novel) — alongside an interactive experience timeline, a categorized skills grid, and a contact form. The design follows a sleek indigo-and-violet accent palette on a deep charcoal background, with attention to typography (Outfit, Inter, JetBrains Mono) and subtle micro-animations throughout.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live Site
 
-## React Compiler
+[https://prasanna-jha.vercel.app](https://prasanna-jha.vercel.app) 
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **React** + **TypeScript**
+- **Vite** — build tooling
+- **Framer Motion** — animations
+- **Tailwind CSS** — styling
+- **Lucide React** — icons
