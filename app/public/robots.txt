@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://prasannajha.com/sitemap.xml
