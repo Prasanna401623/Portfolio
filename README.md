@@ -6,7 +6,7 @@ The portfolio highlights featured projects — including **Carbon Horizon** (an 
 
 ## Live Site
 
-[https://prasanna-jha.vercel.app](https://prasanna-jha.vercel.app) 
+[https://prasannajha.com](https://prasannajha.com) 
 
 ## Tech Stack
 
