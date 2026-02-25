@@ -20,7 +20,7 @@ const experiences: ExperienceItem[] = [
   },
   {
     id: 'hawkeye',
-    role: 'Digital Editor / Web Master',
+    role: 'Web Developer',
     company: 'The Hawkeye',
     period: 'Fall 2024 – Present',
     description: 'Managing the student newspaper website on SNO WordPress platform. Improving accessibility, customizing navigation, and streamlining publishing workflows.',
