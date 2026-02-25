@@ -9,6 +9,7 @@ import Skills from './sections/Skills';
 import Contact from './sections/Contact';
 import Footer from './sections/Footer';
 import Navigation from './components/Navigation';
+import Affiliations from './sections/Affiliations';
 
 function App() {
   const [activeSection, setActiveSection] = useState('hero');
@@ -91,6 +92,9 @@ function App() {
         </section>
         <section id="skills" className="py-24 lg:py-32">
           <Skills />
+        </section>
+        <section id="affiliations" className="py-24 lg:py-32">
+          <Affiliations />
         </section>
         <section id="contact" className="py-24 lg:py-32">
           <Contact />

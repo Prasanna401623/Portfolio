@@ -12,12 +12,11 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
-    id: 'gdsc',
-    role: 'Technical Lead',
-    company: 'GDSC ULM',
-    period: 'Aug 2025 – Present',
-    description: 'Leading technical workshops and mentoring developers. Organizing hackathons and coding challenges, ensuring technical readiness for events like TechExpo.',
-    link: 'https://gdsculm.org',
+    id: 'cashwise',
+    role: 'Software Engineer Intern',
+    company: 'CashWise App LLC',
+    period: 'Jan 2026 – Present',
+    description: 'At CashWise App LLC, I work as a full-stack engineer contributing to NoteLinkAI, an AI-powered productivity platform built with React, TypeScript, and Supabase. I develop and maintain both client-side features and server-side Edge Functions, integrate AI services and Stripe subscription workflows, and help manage secure environment configurations across development and production.',
   },
   {
     id: 'hawkeye',
@@ -78,8 +77,8 @@ function ExperienceCard({ experience, index, isLeft }: ExperienceCardProps) {
       {/* Content Card */}
       <div
         className={`lg:w-[45%] transition-all duration-700 ${isVisible
-            ? 'opacity-100 translate-x-0'
-            : `opacity-0 ${isLeft ? '-translate-x-12' : 'translate-x-12'}`
+          ? 'opacity-100 translate-x-0'
+          : `opacity-0 ${isLeft ? '-translate-x-12' : 'translate-x-12'}`
           }`}
         style={{ transitionDelay: `${index * 150}ms` }}
       >
