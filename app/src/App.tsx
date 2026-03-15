@@ -66,20 +66,14 @@ function App() {
 
         <hr className="section-divider" />
 
-        <section id="about" className="py-20 lg:py-28">
+        <section id="about" className="py-20 lg:py-28 bg-[#F7F7F5]">
           <About />
         </section>
 
         <hr className="section-divider" />
 
-        <section id="skills" className="py-20 lg:py-28 bg-[#F7F7F5]">
+        <section id="skills" className="py-20 lg:py-28">
           <Skills />
-        </section>
-
-        <hr className="section-divider" />
-
-        <section id="projects" className="py-20 lg:py-28">
-          <Projects />
         </section>
 
         <hr className="section-divider" />
@@ -90,19 +84,25 @@ function App() {
 
         <hr className="section-divider" />
 
-        <section id="achievements" className="py-20 lg:py-28">
+        <section id="projects" className="py-20 lg:py-28">
+          <Projects />
+        </section>
+
+        <hr className="section-divider" />
+
+        <section id="achievements" className="py-20 lg:py-28 bg-[#F7F7F5]">
           <Achievements />
         </section>
 
         <hr className="section-divider" />
 
-        <section id="affiliations" className="py-20 lg:py-28 bg-[#F7F7F5]">
+        <section id="affiliations" className="py-20 lg:py-28">
           <Affiliations />
         </section>
 
         <hr className="section-divider" />
 
-        <section id="contact" className="py-20 lg:py-28">
+        <section id="contact" className="py-20 lg:py-28 bg-[#F7F7F5]">
           <Contact />
         </section>
 

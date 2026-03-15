@@ -22,15 +22,6 @@ const experiences: ExperienceItem[] = [
     accent: '#FFCC2F',
   },
   {
-    id: 'gdsc',
-    role: 'Technical Lead',
-    company: 'Google Developer Student Club (GDSC), ULM',
-    period: 'Aug 2025 – Present',
-    description:
-      "As Technical Lead of ULM's Google Developer Student Club, I plan and run technical workshops, hackathons, and student-led projects centered on software development and applied technologies. I mentor members across all experience levels — guiding them through best practices, tooling choices, and problem-solving approaches — and collaborate with club leadership to design hands-on learning experiences for events like TechExpo and coding challenges.",
-    accent: '#4285F4',
-  },
-  {
     id: 'hawkeye',
     role: 'Web Developer',
     company: 'The Hawkeye, ULM',
@@ -49,6 +40,15 @@ const experiences: ExperienceItem[] = [
       "At ULM's Student Success Center, I tutor students in mathematics and physics — MATH 1013, 1031, 1032, PHYS 2003, and PHYS 2004. I break down complex quantitative concepts into clear, approachable steps and adapt my teaching style to each student's individual learning needs, balancing tutoring responsibilities with my own coursework while following SSC professional guidelines.",
     link: 'https://www.ulm.edu/studentsuccess/tutoring.html',
     accent: '#00C48C',
+  },
+  {
+    id: 'gdsc',
+    role: 'Technical Lead',
+    company: 'Google Developer Student Club (GDSC), ULM',
+    period: 'Aug 2025 – Present',
+    description:
+      "As Technical Lead of ULM's Google Developer Student Club, I plan and run technical workshops, hackathons, and student-led projects centered on software development and applied technologies. I mentor members across all experience levels — guiding them through best practices, tooling choices, and problem-solving approaches — and collaborate with club leadership to design hands-on learning experiences for events like TechExpo and coding challenges.",
+    accent: '#4285F4',
   },
   {
     id: 'medicross',
