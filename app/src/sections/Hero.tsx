@@ -133,30 +133,12 @@ export default function Hero({ onNavigate }: HeroProps) {
 
             {/* Photo container */}
             <div className="relative z-10">
-              <div className="w-64 h-80 lg:w-72 lg:h-96 rounded-2xl overflow-hidden bg-[#F0EDE8] flex items-center justify-center shadow-xl border border-[#E8E8E8]">
-                {/*
-                  ┌─────────────────────────────────────────────────────────┐
-                  │  TO ADD YOUR PHOTO:                                     │
-                  │  1. Copy your photo to /app/public/photo.jpg            │
-                  │  2. Replace the placeholder div below with:             │
-                  │     <img src="/photo.jpg"                               │
-                  │          alt="Prasanna Jha"                             │
-                  │          className="w-full h-full object-cover          │
-                  │                     object-top" />                      │
-                  └─────────────────────────────────────────────────────────┘
-                */}
-                <div className="text-center select-none">
-                  <div
-                    className="font-heading font-black text-[#CCBFA8] mb-2"
-                    style={{ fontSize: '5rem', lineHeight: 1 }}
-                  >
-                    PJ
-                  </div>
-                  <p className="text-[#AAAAAA] text-xs font-mono px-4 leading-relaxed">
-                    Drop your photo at<br />
-                    <span className="text-[#888]">public/photo.jpg</span>
-                  </p>
-                </div>
+              <div className="w-64 h-80 lg:w-72 lg:h-96 rounded-2xl overflow-hidden shadow-xl border border-[#E8E8E8]">
+                <img
+                  src="/Prasanna.png"
+                  alt="Prasanna Jha"
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
 
               {/* Available badge */}
