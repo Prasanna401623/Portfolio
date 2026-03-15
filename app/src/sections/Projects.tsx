@@ -9,6 +9,7 @@ interface Project {
   image: string;
   link?: string;
   featured?: boolean;
+  cta?: string;
   tagClass?: string;
 }
 
@@ -17,34 +18,37 @@ const projects: Project[] = [
     id: 'carbon-horizon',
     title: 'Carbon Horizon',
     description:
-      'AI-powered climate platform for emissions tracking and CCUS insights. Built with React and Python, featuring real-time data visualization and anomaly detection.',
+      'AI-powered climate platform for emissions tracking and CCUS insights. Built with React and Python, featuring real-time data visualization and anomaly detection. Placed 1st at the DevDays ClimateTech Challenge.',
     tags: ['React', 'Python', 'AI/ML', 'Data Viz'],
     image: '/project_carbon_v2.png',
     link: 'https://www.ulm.edu/news/2025/comp_science_devdays_111125.html',
     featured: true,
+    cta: 'Learn more',
     tagClass: 'tag tag-green',
   },
   {
     id: 'notelinkai',
     title: 'NoteLinkAI',
     description:
-      'AI learning platform with smart notes and study assistance. Leverages OpenAI API for intelligent content generation and summarization.',
+      'AI learning platform with smart notes and study assistance. Leverages OpenAI API for intelligent content generation and summarization. Built as part of my internship at CashWise App LLC.',
     tags: ['Next.js', 'TypeScript', 'OpenAI', 'PostgreSQL'],
     image: '/project_notelink_v2.png',
     link: 'https://notelinkai.com',
     featured: true,
+    cta: 'See the work',
     tagClass: 'tag tag-purple',
   },
   {
-    id: 'saferoute',
-    title: 'SafeRoute',
+    id: 'nepunite',
+    title: 'NepUnite',
     description:
-      'Full-stack mobile safety app with real-time GPS-based risk scoring, NLP severity classification, and automated crime data ingestion via OpenAI GPT.',
-    tags: ['React Native', 'Django', 'OpenAI API', 'Google Maps'],
-    image: '/project_saferoute.png',
-    link: 'https://github.com/Prasanna401623/SafeRoute',
+      'Community web platform with a Housing module supporting listings and user interaction. Contributed to full-stack frontend and backend development as part of a collaborative team.',
+    tags: ['Full-Stack', 'React', 'Community', 'Web Platform'],
+    image: '/project_nepUnite.png',
+    link: 'https://www.nepunite.com',
     featured: true,
-    tagClass: 'tag tag-blue',
+    cta: 'See the work',
+    tagClass: 'tag tag-dark',
   },
   {
     id: 'escape-maze',
@@ -57,14 +61,14 @@ const projects: Project[] = [
     tagClass: 'tag tag-yellow',
   },
   {
-    id: 'nepunite',
-    title: 'NepUnite',
+    id: 'saferoute',
+    title: 'SafeRoute',
     description:
-      'Community web platform with a Housing module supporting listings and user interaction. Contributed to frontend and backend development.',
-    tags: ['Full-Stack', 'React', 'Community', 'Web Platform'],
-    image: '/project_nepUnite.png',
-    link: 'https://www.nepunite.com',
-    tagClass: 'tag tag-dark',
+      'Full-stack mobile safety app with real-time GPS-based risk scoring, NLP severity classification, and automated crime data ingestion via OpenAI GPT.',
+    tags: ['React Native', 'Django', 'OpenAI API', 'Google Maps'],
+    image: '/project_saferoute.png',
+    link: 'https://github.com/Prasanna401623/SafeRoute',
+    tagClass: 'tag tag-blue',
   },
 ];
 
@@ -141,7 +145,7 @@ function FeaturedCard({ project, index }: { project: Project; index: number }) {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 font-heading text-sm font-bold text-[#111111] hover:gap-3 transition-all"
               >
-                See full case study
+                {project.cta ?? 'View project'}
                 <ArrowRight size={15} />
               </a>
             )}

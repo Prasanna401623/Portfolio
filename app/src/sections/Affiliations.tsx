@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from 'react';
+import { Code2, BookOpen, Cpu, Globe } from 'lucide-react';
 
 interface AffiliationItem {
   id: string;
   organization: string;
   role: string;
-  emoji: string;
+  icon: React.ReactNode;
   accent: string;
 }
 
@@ -13,28 +14,28 @@ const affiliations: AffiliationItem[] = [
     id: 'gdsc',
     organization: 'Google Developer Student Clubs',
     role: 'Technical Lead',
-    emoji: '🔵',
+    icon: <Code2 size={20} strokeWidth={1.75} />,
     accent: '#4285F4',
   },
   {
     id: 'codepath',
     organization: 'CodePath',
     role: 'Member',
-    emoji: '💡',
+    icon: <BookOpen size={20} strokeWidth={1.75} />,
     accent: '#FFCC2F',
   },
   {
     id: 'acm',
     organization: 'Association for Computing Machinery (ACM)',
     role: 'Member',
-    emoji: '⚙️',
+    icon: <Cpu size={20} strokeWidth={1.75} />,
     accent: '#00C48C',
   },
   {
     id: 'nsa',
     organization: 'Nepalese Student Association',
     role: 'Member',
-    emoji: '🇳🇵',
+    icon: <Globe size={20} strokeWidth={1.75} />,
     accent: '#DC143C',
   },
 ];
@@ -64,7 +65,6 @@ export default function Affiliations() {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
       >
-        {/* Header */}
         <div className="text-center mb-12">
           <span className="section-label">Involvement</span>
           <h2
@@ -78,7 +78,6 @@ export default function Affiliations() {
           </p>
         </div>
 
-        {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {affiliations.map((affiliation, index) => (
             <div
@@ -88,12 +87,14 @@ export default function Affiliations() {
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              {/* Emoji icon */}
               <div
-                className="w-12 h-12 rounded-xl flex items-center justify-center text-xl flex-shrink-0"
-                style={{ backgroundColor: `${affiliation.accent}18` }}
+                className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0"
+                style={{
+                  backgroundColor: `${affiliation.accent}18`,
+                  color: affiliation.accent === '#FFCC2F' ? '#8a6d00' : affiliation.accent,
+                }}
               >
-                {affiliation.emoji}
+                {affiliation.icon}
               </div>
 
               <div>
@@ -102,7 +103,7 @@ export default function Affiliations() {
                 </h4>
                 <span
                   className="font-mono text-xs uppercase tracking-wider font-medium"
-                  style={{ color: affiliation.accent }}
+                  style={{ color: affiliation.accent === '#FFCC2F' ? '#8a6d00' : affiliation.accent }}
                 >
                   {affiliation.role}
                 </span>

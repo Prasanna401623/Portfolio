@@ -25,11 +25,13 @@ export default function Navigation({ activeSection, onNavigate, scrolled }: Navi
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300 ${
-          scrolled ? 'border-b border-[#E8E8E8] shadow-sm' : 'border-b border-transparent'
+        className={`fixed top-4 left-4 right-4 z-50 rounded-2xl transition-all duration-300 ${
+          scrolled
+            ? 'bg-[#FAFAF8]/95 backdrop-blur-md shadow-lg border border-[#E0DDD8]'
+            : 'bg-[#FAFAF8]/80 backdrop-blur-sm shadow-md border border-[#E8E8E8]/60'
         }`}
       >
-        <div className="max-w-6xl mx-auto px-6 lg:px-12 flex items-center justify-between h-16 lg:h-18">
+        <div className="max-w-6xl mx-auto px-5 lg:px-8 flex items-center justify-between h-14 lg:h-16">
           {/* Logo */}
           <button
             onClick={() => handleNavClick('hero')}
@@ -77,7 +79,7 @@ export default function Navigation({ activeSection, onNavigate, scrolled }: Navi
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 z-40 bg-white transition-all duration-400 md:hidden ${
+        className={`fixed inset-0 z-40 bg-[#FAFAF8] transition-all duration-400 md:hidden ${
           isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
       >

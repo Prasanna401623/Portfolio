@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Monitor, Brain, Briefcase } from 'lucide-react';
 
 interface Service {
   id: string;
-  emoji: string;
+  icon: React.ReactNode;
   title: string;
   description: string;
   skills: string[];
@@ -16,7 +16,7 @@ interface Service {
 const services: Service[] = [
   {
     id: 'fullstack',
-    emoji: '🖥️',
+    icon: <Monitor size={22} strokeWidth={1.75} />,
     title: 'Full-Stack Development',
     description:
       'I build end-to-end web applications — from polished React frontends to robust Node.js / Supabase backends. I handle auth, APIs, databases, and deployments.',
@@ -28,7 +28,7 @@ const services: Service[] = [
   },
   {
     id: 'ai',
-    emoji: '🤖',
+    icon: <Brain size={22} strokeWidth={1.75} />,
     title: 'AI & Machine Learning',
     description:
       'I integrate LLMs and build ML-powered features — from OpenAI-backed study tools to real-time anomaly detection and NLP pipelines using Python and Pandas.',
@@ -40,10 +40,10 @@ const services: Service[] = [
   },
   {
     id: 'open',
-    emoji: '🚀',
+    icon: <Briefcase size={22} strokeWidth={1.75} />,
     title: 'Open to Opportunities',
     description:
-      "I'm looking for internships, research collaborations, and exciting side projects. If you're building something interesting \u2014 let's talk.",
+      "I'm looking for internships, research collaborations, and exciting side projects. If you're building something interesting — let's talk.",
     skills: ['Internships', 'Research', 'Hackathons', 'Open Source', 'Freelance'],
     cta: 'Get in touch',
     ctaTarget: 'contact',
@@ -84,12 +84,11 @@ function ServiceCard({ service, index, onNavigate }: ServiceCardProps) {
       style={{ transitionDelay: `${index * 120}ms` }}
     >
       <div className="card-light card-light-hover p-8 h-full flex flex-col group">
-        {/* Emoji icon */}
         <div
-          className="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-6 transition-transform duration-300 group-hover:scale-110"
-          style={{ backgroundColor: `${service.accent}20` }}
+          className="w-12 h-12 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110"
+          style={{ backgroundColor: `${service.accent}20`, color: service.accent === '#FFCC2F' ? '#8a6d00' : service.accent }}
         >
-          {service.emoji}
+          {service.icon}
         </div>
 
         <h3 className="font-heading text-xl font-bold text-[#111111] mb-3">
@@ -100,7 +99,6 @@ function ServiceCard({ service, index, onNavigate }: ServiceCardProps) {
           {service.description}
         </p>
 
-        {/* Skill tags */}
         <div className="flex flex-wrap gap-2 mb-6">
           {service.skills.map((skill) => (
             <span key={skill} className={service.tagClass}>
@@ -109,10 +107,9 @@ function ServiceCard({ service, index, onNavigate }: ServiceCardProps) {
           ))}
         </div>
 
-        {/* CTA link */}
         <button
           onClick={() => onNavigate(service.ctaTarget)}
-          className="flex items-center gap-1.5 font-heading text-sm font-bold text-[#111111] hover:gap-3 transition-all"
+          className="flex items-center gap-1.5 font-heading text-sm font-bold hover:gap-3 transition-all"
           style={{ color: service.accent === '#FFCC2F' ? '#111111' : service.accent }}
         >
           {service.cta}
@@ -151,7 +148,6 @@ export default function Skills({ onNavigate }: SkillsProps) {
   return (
     <div className="px-6 lg:px-12">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
         <div
           ref={titleRef}
           className={`text-center mb-12 lg:mb-16 transition-all duration-700 ${
@@ -170,7 +166,6 @@ export default function Skills({ onNavigate }: SkillsProps) {
           </p>
         </div>
 
-        {/* Service Cards */}
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
           {services.map((service, index) => (
             <ServiceCard
@@ -182,7 +177,6 @@ export default function Skills({ onNavigate }: SkillsProps) {
           ))}
         </div>
 
-        {/* Tech tags row */}
         <div
           className={`mt-14 pt-10 border-t border-[#E8E8E8] transition-all duration-700 delay-500 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
