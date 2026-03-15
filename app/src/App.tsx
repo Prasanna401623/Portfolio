@@ -19,7 +19,6 @@ function App() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -28,7 +27,7 @@ function App() {
     const observerOptions = {
       root: null,
       rootMargin: '-40% 0px -40% 0px',
-      threshold: 0
+      threshold: 0,
     };
 
     const observerCallback: IntersectionObserverCallback = (entries) => {
@@ -40,10 +39,8 @@ function App() {
     };
 
     const observer = new IntersectionObserver(observerCallback, observerOptions);
-
     const sections = document.querySelectorAll('section[id]');
     sections.forEach((section) => observer.observe(section));
-
     return () => observer.disconnect();
   }, []);
 
@@ -55,50 +52,62 @@ function App() {
   };
 
   return (
-    <div className="relative min-h-screen bg-[#0F0F12]">
-      {/* Background Gradient */}
-      <div className="fixed inset-0 bg-gradient-main pointer-events-none" />
-
-      {/* Floating Gradient Orbs */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="gradient-orb w-[600px] h-[600px] bg-[#6366F1] top-[-200px] right-[-100px] animate-float" />
-        <div className="gradient-orb w-[400px] h-[400px] bg-[#8B5CF6] bottom-[20%] left-[-100px] animate-float-delayed" />
-        <div className="gradient-orb w-[300px] h-[300px] bg-[#6366F1] top-[40%] right-[20%] opacity-20" />
-      </div>
-
-      {/* Navigation */}
+    <div className="relative min-h-screen bg-white">
       <Navigation
         activeSection={activeSection}
         onNavigate={scrollToSection}
         scrolled={scrolled}
       />
 
-      {/* Main Content */}
-      <main className="relative z-10">
+      <main>
         <section id="hero" className="min-h-screen">
           <Hero onNavigate={scrollToSection} />
         </section>
-        <section id="about" className="py-24 lg:py-32">
+
+        <hr className="section-divider" />
+
+        <section id="about" className="py-20 lg:py-28">
           <About />
         </section>
-        <section id="projects" className="py-24 lg:py-32">
-          <Projects />
-        </section>
-        <section id="experience" className="py-24 lg:py-32">
-          <Experience />
-        </section>
-        <section id="achievements" className="py-24 lg:py-32">
-          <Achievements />
-        </section>
-        <section id="skills" className="py-24 lg:py-32">
+
+        <hr className="section-divider" />
+
+        <section id="skills" className="py-20 lg:py-28 bg-[#F7F7F5]">
           <Skills />
         </section>
-        <section id="affiliations" className="py-24 lg:py-32">
+
+        <hr className="section-divider" />
+
+        <section id="projects" className="py-20 lg:py-28">
+          <Projects />
+        </section>
+
+        <hr className="section-divider" />
+
+        <section id="experience" className="py-20 lg:py-28 bg-[#F7F7F5]">
+          <Experience />
+        </section>
+
+        <hr className="section-divider" />
+
+        <section id="achievements" className="py-20 lg:py-28">
+          <Achievements />
+        </section>
+
+        <hr className="section-divider" />
+
+        <section id="affiliations" className="py-20 lg:py-28 bg-[#F7F7F5]">
           <Affiliations />
         </section>
-        <section id="contact" className="py-24 lg:py-32">
+
+        <hr className="section-divider" />
+
+        <section id="contact" className="py-20 lg:py-28">
           <Contact />
         </section>
+
+        <hr className="section-divider" />
+
         <Footer onNavigate={scrollToSection} />
       </main>
     </div>

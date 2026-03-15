@@ -7,6 +7,8 @@ interface Achievement {
   organization: string;
   description: string;
   icon: 'trophy' | 'graduation' | 'award' | 'flame';
+  accent: string;
+  bgColor: string;
 }
 
 const achievements: Achievement[] = [
@@ -17,6 +19,8 @@ const achievements: Achievement[] = [
     description:
       'Maintained a perfect 4.0 GPA across five consecutive semesters, earning a spot on the President\'s List each term.',
     icon: 'graduation',
+    accent: '#00C48C',
+    bgColor: '#D1FAE5',
   },
   {
     id: 'devdays-2025',
@@ -25,6 +29,8 @@ const achievements: Achievement[] = [
     description:
       'Won the inaugural DevDays hackathon focused on climate technology, building Carbon Horizon — an AI-powered emissions tracking platform.',
     icon: 'flame',
+    accent: '#FFCC2F',
+    bgColor: '#FFF3B0',
   },
   {
     id: 'symposium-2025',
@@ -33,6 +39,8 @@ const achievements: Achievement[] = [
     description:
       'Awarded first place for a poster presentation showcasing research and development work at the annual ULM Symposium.',
     icon: 'award',
+    accent: '#7C3AED',
+    bgColor: '#EDE9FE',
   },
   {
     id: 'techxpo-2024',
@@ -41,6 +49,8 @@ const achievements: Achievement[] = [
     description:
       'Recognized with the Best Domain Award at TechXpo 2024 for outstanding project execution and domain expertise.',
     icon: 'trophy',
+    accent: '#F59E0B',
+    bgColor: '#FEF3C7',
   },
 ];
 
@@ -51,56 +61,61 @@ const iconMap = {
   flame: Flame,
 };
 
-interface AchievementCardProps {
+interface CardProps {
   achievement: Achievement;
   index: number;
 }
 
-function AchievementCard({ achievement, index }: AchievementCardProps) {
+function AchievementCard({ achievement, index }: CardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const Icon = iconMap[achievement.icon];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-          }
+          if (entry.isIntersecting) setIsVisible(true);
         });
       },
       { threshold: 0.2 }
     );
-
     if (cardRef.current) observer.observe(cardRef.current);
     return () => observer.disconnect();
   }, []);
 
-  const IconComponent = iconMap[achievement.icon];
-
   return (
     <div
       ref={cardRef}
-      className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-        }`}
-      style={{ transitionDelay: `${index * 150}ms` }}
+      className={`transition-all duration-700 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      }`}
+      style={{ transitionDelay: `${index * 120}ms` }}
     >
-      <div className="glass-card p-6 lg:p-8 card-hover group h-full flex flex-col">
+      <div className="card-light card-light-hover p-7 lg:p-8 h-full flex flex-col group">
         {/* Icon */}
-        <div className="w-12 h-12 rounded-xl bg-[#6366F1]/10 border border-[#6366F1]/20 flex items-center justify-center mb-5 group-hover:bg-[#6366F1]/20 transition-all duration-300">
-          <IconComponent size={22} className="text-[#6366F1]" />
+        <div
+          className="w-12 h-12 rounded-xl flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110"
+          style={{ backgroundColor: achievement.bgColor }}
+        >
+          <Icon size={22} style={{ color: achievement.accent }} />
         </div>
 
-        {/* Content */}
-        <h3 className="font-heading text-lg font-semibold text-[#FAFAFA] mb-2 group-hover:text-gradient transition-all">
+        {/* Title */}
+        <h3 className="font-heading text-lg font-bold text-[#111111] mb-1 leading-snug">
           {achievement.title}
         </h3>
 
-        <span className="text-[#6366F1] font-mono text-xs tracking-wide uppercase mb-3">
+        {/* Org */}
+        <span
+          className="font-mono text-xs uppercase tracking-wider mb-3"
+          style={{ color: achievement.accent }}
+        >
           {achievement.organization}
         </span>
 
-        <p className="text-[#A1A1AA] text-sm leading-relaxed mt-auto">
+        {/* Description */}
+        <p className="text-[#555555] text-sm leading-relaxed mt-auto">
           {achievement.description}
         </p>
       </div>
@@ -116,46 +131,41 @@ export default function Achievements() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-          }
+          if (entry.isIntersecting) setIsVisible(true);
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.2 }
     );
-
     if (titleRef.current) observer.observe(titleRef.current);
     return () => observer.disconnect();
   }, []);
 
   return (
-    <div className="relative px-6 lg:px-12">
+    <div className="px-6 lg:px-12">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div
           ref={titleRef}
-          className={`text-center mb-12 lg:mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
+          className={`text-center mb-12 lg:mb-16 transition-all duration-700 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
         >
-          <span className="font-mono text-sm text-[#6366F1] tracking-widest uppercase">
-            Recognition
-          </span>
-          <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold text-[#FAFAFA] mt-4">
-            Achievements & <span className="text-gradient">Awards</span>
+          <span className="section-label">Recognition</span>
+          <h2
+            className="font-heading font-black text-[#111111] mt-4"
+            style={{ fontSize: 'clamp(2rem,4vw,3rem)' }}
+          >
+            Achievements & Awards
           </h2>
-          <p className="text-[#A1A1AA] mt-4 max-w-2xl mx-auto">
-            Milestones and recognitions earned through academics, competitions, and hackathons.
+          <p className="text-[#888888] mt-4 max-w-xl mx-auto">
+            Milestones earned through academics, competitions, and hackathons.
           </p>
         </div>
 
-        {/* Achievements Grid */}
+        {/* Grid */}
         <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
           {achievements.map((achievement, index) => (
-            <AchievementCard
-              key={achievement.id}
-              achievement={achievement}
-              index={index}
-            />
+            <AchievementCard key={achievement.id} achievement={achievement} index={index} />
           ))}
         </div>
       </div>
