@@ -15,11 +15,22 @@ interface Project {
 
 const projects: Project[] = [
   {
+    id: 'codesense',
+    title: 'CodeSense',
+    description:
+      'AI-powered code review assistant built solo — React/TypeScript frontend on Cloudflare Pages with a Hono-routed Worker backend. Architected a 4-step execution pipeline using Cloudflare Workflows and integrated Llama 3.3 70B via Workers AI for structured bug, security, and performance analysis. Implemented per-session persistent memory using Durable Objects.',
+    tags: ['React', 'TypeScript', 'Cloudflare', 'Hono'],
+    image: '/project_codesense.png',
+    featured: true,
+    cta: 'View project',
+    tagClass: 'tag tag-dark',
+  },
+  {
     id: 'carbon-horizon',
     title: 'Carbon Horizon',
     description:
-      'AI-powered climate platform for emissions tracking and CCUS insights. Built with React and Python, featuring real-time data visualization and anomaly detection. Placed 1st at the DevDays ClimateTech Challenge.',
-    tags: ['React', 'Python', 'AI/ML', 'Data Viz'],
+      'AI-powered climate platform for emissions tracking and CCUS insights. Built with React and GraphQL, querying and visualizing 72,000+ Climate TRACE emissions records across multiple sectors. Placed 1st at the DevDays ClimateTech Challenge.',
+    tags: ['React', 'GraphQL', 'AI/ML', 'Data Viz'],
     image: '/project_carbon_v2.png',
     link: 'https://www.ulm.edu/news/2025/comp_science_devdays_111125.html',
     featured: true,
@@ -42,19 +53,19 @@ const projects: Project[] = [
     id: 'nepunite',
     title: 'NepUnite',
     description:
-      'Community web platform with a Housing module supporting listings and user interaction. Contributed to full-stack frontend and backend development as part of a collaborative team.',
-    tags: ['Full-Stack', 'React', 'Community', 'Web Platform'],
+      'Community web platform with a Housing module supporting listings and user interaction. Built full-stack features including listing creation, filtering, and data-driven UI components, alongside backend REST APIs with clean data contracts and validation logic.',
+    tags: ['Full-Stack', 'React', 'Next.js', 'REST API'],
     image: '/project_nepUnite.png',
     link: 'https://www.nepunite.com',
     featured: true,
     cta: 'See the work',
-    tagClass: 'tag tag-dark',
+    tagClass: 'tag tag-blue',
   },
   {
     id: 'escape-maze',
     title: 'Escape the Virtual Maze',
     description:
-      'Educational visual novel game teaching programming and cybersecurity through interactive storytelling and decision-based gameplay.',
+      'Educational visual novel teaching programming logic, control flow, and cybersecurity through interactive branching gameplay. Covers loops, logic errors, phishing awareness, and ethical technology use. Awarded 1st Place at the ULM Research & Creative Activity Symposium 2025.',
     tags: ["Ren'Py", 'Game Dev', 'Education', 'Python'],
     image: '/project_maze_v2.png',
     link: 'https://prasannajha401.itch.io/loops',
@@ -64,11 +75,20 @@ const projects: Project[] = [
     id: 'saferoute',
     title: 'SafeRoute',
     description:
-      'Full-stack mobile safety app with real-time GPS-based risk scoring, NLP severity classification, and automated crime data ingestion via OpenAI GPT.',
-    tags: ['React Native', 'Django', 'OpenAI API', 'Google Maps'],
+      'Crime-aware navigation mobile app with a Django REST Framework backend storing geospatial incident data and a React Native/Expo frontend featuring Google OAuth, an interactive crime map with real-time overlays, and data-driven statistics visualization.',
+    tags: ['React Native', 'Expo', 'Django', 'Python'],
     image: '/project_saferoute.png',
     link: 'https://github.com/Prasanna401623/SafeRoute',
-    tagClass: 'tag tag-blue',
+    tagClass: 'tag tag-dark',
+  },
+  {
+    id: 'gunhand',
+    title: 'GunHand',
+    description:
+      'Gesture-controlled browser game using Google MediaPipe for real-time hand tracking — open-palm maps to crosshair movement, closed-fist fires via synthetic mouse events. Split deployment with Vue 3 on Netlify and a Node.js/Express backend on Render serving a global high-score leaderboard API. Awarded 2nd Place at the ULM Honors Symposium 2026.',
+    tags: ['Vue 3', 'Node.js', 'MediaPipe', 'JavaScript'],
+    image: '/project_gunhand.png',
+    tagClass: 'tag tag-green',
   },
 ];
 
