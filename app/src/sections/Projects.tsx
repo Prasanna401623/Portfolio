@@ -20,7 +20,8 @@ const projects: Project[] = [
     description:
       'AI-powered code review assistant built solo — React/TypeScript frontend on Cloudflare Pages with a Hono-routed Worker backend. Architected a 4-step execution pipeline using Cloudflare Workflows and integrated Llama 3.3 70B via Workers AI for structured bug, security, and performance analysis. Implemented per-session persistent memory using Durable Objects.',
     tags: ['React', 'TypeScript', 'Cloudflare', 'Hono'],
-    image: '/project_codesense.png',
+    image: '/CodeSense.png',
+    link: 'https://cf-ai-codesense.pages.dev',
     featured: true,
     cta: 'View project',
     tagClass: 'tag tag-dark',
