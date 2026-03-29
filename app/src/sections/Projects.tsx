@@ -87,7 +87,7 @@ const projects: Project[] = [
     description:
       'Gesture-controlled browser game using Google MediaPipe for real-time hand tracking — open-palm maps to crosshair movement, closed-fist fires via synthetic mouse events. Split deployment with Vue 3 on Netlify and a Node.js/Express backend on Render serving a global high-score leaderboard API. Awarded 2nd Place at the ULM Honors Symposium 2026.',
     tags: ['Vue 3', 'Node.js', 'MediaPipe', 'JavaScript'],
-    image: '/project_gunhand.png',
+    image: '/DuckHunt.avif',
     tagClass: 'tag tag-green',
   },
 ];
