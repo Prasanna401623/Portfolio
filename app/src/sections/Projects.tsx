@@ -31,7 +31,7 @@ const projects: Project[] = [
     description:
       'AI-powered climate platform for emissions tracking and CCUS insights. Built with React and GraphQL, querying and visualizing 72,000+ Climate TRACE emissions records across multiple sectors. Placed 1st at the DevDays ClimateTech Challenge.',
     tags: ['React', 'GraphQL', 'AI/ML', 'Data Viz'],
-    image: '/project_carbon_v2.png',
+    image: '/project_carbon_v2.jpg',
     link: 'https://www.ulm.edu/news/2025/comp_science_devdays_111125.html',
     featured: true,
     cta: 'Learn more',
@@ -43,7 +43,7 @@ const projects: Project[] = [
     description:
       'AI learning platform with smart notes and study assistance. Leverages OpenAI API for intelligent content generation and summarization. Built as part of my internship at CashWise App LLC.',
     tags: ['Next.js', 'TypeScript', 'OpenAI', 'PostgreSQL'],
-    image: '/project_notelink_v2.png',
+    image: '/project_notelink_v2.jpg',
     link: 'https://notelinkai.com',
     featured: true,
     cta: 'See the work',
@@ -55,7 +55,7 @@ const projects: Project[] = [
     description:
       'Community web platform with a Housing module supporting listings and user interaction. Built full-stack features including listing creation, filtering, and data-driven UI components, alongside backend REST APIs with clean data contracts and validation logic.',
     tags: ['Full-Stack', 'React', 'Next.js', 'REST API'],
-    image: '/project_nepUnite.png',
+    image: '/project_nepUnite.jpg',
     link: 'https://www.nepunite.com',
     featured: true,
     cta: 'See the work',
@@ -67,7 +67,7 @@ const projects: Project[] = [
     description:
       'Educational visual novel teaching programming logic, control flow, and cybersecurity through interactive branching gameplay. Covers loops, logic errors, phishing awareness, and ethical technology use. Awarded 1st Place at the ULM Research & Creative Activity Symposium 2025.',
     tags: ["Ren'Py", 'Game Dev', 'Education', 'Python'],
-    image: '/project_maze_v2.png',
+    image: '/project_maze_v2.jpg',
     link: 'https://prasannajha401.itch.io/loops',
     tagClass: 'tag tag-yellow',
   },
@@ -77,7 +77,7 @@ const projects: Project[] = [
     description:
       'Crime-aware navigation mobile app with a Django REST Framework backend storing geospatial incident data and a React Native/Expo frontend featuring Google OAuth, an interactive crime map with real-time overlays, and data-driven statistics visualization.',
     tags: ['React Native', 'Expo', 'Django', 'Python'],
-    image: '/project_saferoute.png',
+    image: '/project_saferoute.jpg',
     link: 'https://github.com/Prasanna401623/SafeRoute',
     tagClass: 'tag tag-dark',
   },

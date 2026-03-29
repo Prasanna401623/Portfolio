@@ -135,7 +135,7 @@ export default function Hero({ onNavigate }: HeroProps) {
             <div className="relative z-10">
               <div className="w-64 h-80 lg:w-72 lg:h-96 rounded-2xl overflow-hidden shadow-xl border border-[#E8E8E8]">
                 <img
-                  src="/Prasanna.png"
+                  src="/Prasanna.jpg"
                   alt="Prasanna Jha"
                   className="w-full h-full object-cover object-top"
                 />
