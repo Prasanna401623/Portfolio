@@ -13,12 +13,21 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
+    id: 'sharkninja',
+    role: 'SharkByte Applied AI & Analytics Intern',
+    company: 'SharkNinja',
+    period: 'Jun 2026 – Aug 2026',
+    description:
+      'As a SharkByte intern at SharkNinja, I owned the Competitor Analysis page of a leadership-facing analytics dashboard, unifying customer review data with a 770M-row retail point-of-sale revenue table in Snowflake. The page gave marketing and sales stakeholders self-service access to competitive benchmarks that previously required Snowflake credentials and manual querying to retrieve.',
+    accent: '#0EA5E9',
+  },
+  {
     id: 'cashwise',
     role: 'Software Engineer Intern',
     company: 'CashWise App LLC',
-    period: 'Jan 2026 – Present',
+    period: 'Jan 2026 – May 2026',
     description:
-      'At CashWise App LLC, I work on NoteLinkAI — an AI-powered study platform built with React, TypeScript, and Supabase. I develop full-stack features across the client and Supabase Edge Functions, integrate OpenAI APIs for intelligent note assistance and content generation, and own the end-to-end Stripe subscription and payment workflows. I also configured Sentry for real-time error tracking and contributed to GitHub Actions CI/CD pipelines to keep deployments fast and reliable.',
+      'At CashWise App LLC, I worked on NoteLinkAI, an AI-powered study platform built with React, TypeScript, and Supabase. I developed full-stack features across the client and Supabase Edge Functions, integrated OpenAI APIs for intelligent note assistance and content generation, and owned the end-to-end Stripe subscription and payment workflows. I also configured Sentry for real-time error tracking and contributed to GitHub Actions CI/CD pipelines to keep deployments fast and reliable.',
     accent: '#FFCC2F',
   },
   {
@@ -27,7 +36,7 @@ const experiences: ExperienceItem[] = [
     company: 'The Hawkeye, ULM',
     period: 'Fall 2024 – Present',
     description:
-      "As Web Developer for The Hawkeye — ULM's student newspaper — I manage the publication's website on the SNO WordPress platform. I publish and organize news and sports content while maintaining AP style standards, customize site navigation and multimedia widgets to improve reader accessibility and engagement, and collaborate with editors, writers, and faculty advisors to resolve technical issues and support digital coverage of campus events and athletics.",
+      "As Web Developer for The Hawkeye, ULM's student newspaper, I manage the publication's website on the SNO WordPress platform. I publish and organize news and sports content while maintaining AP style standards, customize site navigation and multimedia widgets to improve reader accessibility and engagement, and collaborate with editors, writers, and faculty advisors to resolve technical issues and support digital coverage of campus events and athletics.",
     link: 'https://ulmhawkeyeonline.com/staff_name/prasanna-jha/',
     accent: '#7C3AED',
   },
@@ -37,17 +46,17 @@ const experiences: ExperienceItem[] = [
     company: 'Student Success Center, ULM',
     period: 'Jan 2025 – Present',
     description:
-      "At ULM's Student Success Center, I tutor students in mathematics and physics — MATH 1013, 1031, 1032, PHYS 2003, and PHYS 2004. I break down complex quantitative concepts into clear, approachable steps and adapt my teaching style to each student's individual learning needs, balancing tutoring responsibilities with my own coursework while following SSC professional guidelines.",
+      "At ULM's Student Success Center, I tutor students in mathematics and physics, covering MATH 1013, 1031, 1032, PHYS 2003, and PHYS 2004. I break down complex quantitative concepts into clear, approachable steps and adapt my teaching style to each student's individual learning needs, balancing tutoring responsibilities with my own coursework while following SSC professional guidelines.",
     link: 'https://www.ulm.edu/studentsuccess/tutoring.html',
     accent: '#00C48C',
   },
   {
     id: 'gdsc',
-    role: 'Technical Lead',
+    role: 'Internal Vice President',
     company: 'Google Developer Student Club (GDSC), ULM',
     period: 'Aug 2025 – Present',
     description:
-      "As Technical Lead of ULM's Google Developer Student Club, I plan and run technical workshops, hackathons, and student-led projects centered on software development and applied technologies. I mentor members across all experience levels — guiding them through best practices, tooling choices, and problem-solving approaches — and collaborate with club leadership to design hands-on learning experiences for events like TechExpo and coding challenges.",
+      "I serve as Internal Vice President of ULM's Google Developer Student Club, a role I stepped into after leading the club as Technical Lead. I plan and run technical workshops, hackathons, and student-led projects centered on software development and applied technologies. I mentor members across all experience levels, guiding them through best practices, tooling choices, and problem-solving approaches, and I collaborate with club leadership to design hands-on learning experiences for events like TechExpo and coding challenges.",
     accent: '#4285F4',
   },
   {

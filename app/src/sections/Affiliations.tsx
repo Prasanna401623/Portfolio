@@ -13,7 +13,7 @@ const affiliations: AffiliationItem[] = [
   {
     id: 'gdsc',
     organization: 'Google Developer Student Clubs',
-    role: 'Technical Lead',
+    role: 'Internal Vice President',
     icon: <Code2 size={20} strokeWidth={1.75} />,
     accent: '#4285F4',
   },

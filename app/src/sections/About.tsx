@@ -101,7 +101,7 @@ export default function About() {
             </h2>
 
             <p className="text-[#555555] text-base leading-relaxed mb-4">
-              I'm a Computer Science student at the University of Louisiana at Monroe
+              I'm a senior Computer Science student at the University of Louisiana at Monroe
               with a minor in Mathematics. I specialize in full-stack development,
               data analysis, and applied machine learning.
             </p>
@@ -134,7 +134,7 @@ export default function About() {
               <AnimatedStat value={4}  suffix="+" label="Years Coding"       delay={0} />
               <AnimatedStat value={8}  suffix="+" label="Projects Built"     delay={100} />
               <AnimatedStat value={3}  suffix=""  label="Leadership Roles"   delay={200} />
-              <AnimatedStat value={5}  suffix=""  label="Semesters on President's List" delay={300} />
+              <AnimatedStat value={6}  suffix=""  label="Semesters on President's List" delay={300} />
             </div>
           </div>
         </div>

@@ -55,9 +55,9 @@ export default function Hero({ onNavigate }: HeroProps) {
               at ULM. I turn ideas into scalable, user-focused products.
             </p>
             <p className="text-[#888888] text-base leading-relaxed mb-8 max-w-md">
-              Currently interning at{' '}
-              <span className="text-[#111111] font-semibold">CashWise App LLC</span>{' '}
-              — building the future of AI-powered productivity.
+              Most recently an Applied AI & Analytics intern at{' '}
+              <span className="text-[#111111] font-semibold">SharkNinja</span>,
+              turning large-scale data into decisions leaders can act on.
             </p>
 
             {/* CTAs */}

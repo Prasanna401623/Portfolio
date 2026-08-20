@@ -19,7 +19,7 @@ const services: Service[] = [
     icon: <Monitor size={22} strokeWidth={1.75} />,
     title: 'Full-Stack Development',
     description:
-      'I build end-to-end web applications — from polished React frontends to robust Node.js / Supabase backends. I handle auth, APIs, databases, and deployments.',
+      'I build end-to-end web applications, from polished React frontends to robust Node.js / Supabase backends. I handle auth, APIs, databases, and deployments.',
     skills: ['React', 'Next.js', 'TypeScript', 'Node.js', 'Supabase', 'REST APIs'],
     cta: 'See my projects',
     ctaTarget: 'projects',
@@ -31,7 +31,7 @@ const services: Service[] = [
     icon: <Brain size={22} strokeWidth={1.75} />,
     title: 'AI & Machine Learning',
     description:
-      'I integrate LLMs and build ML-powered features — from OpenAI-backed study tools to real-time anomaly detection and NLP pipelines using Python and Pandas.',
+      'I integrate LLMs and build ML-powered features, from OpenAI-backed study tools to real-time anomaly detection and NLP pipelines using Python and Pandas.',
     skills: ['Python', 'OpenAI API', 'Pandas', 'ML Fundamentals', 'Data Analysis', 'NLP'],
     cta: 'Explore AI projects',
     ctaTarget: 'projects',
@@ -43,7 +43,7 @@ const services: Service[] = [
     icon: <Briefcase size={22} strokeWidth={1.75} />,
     title: 'Open to Opportunities',
     description:
-      "I'm looking for internships, research collaborations, and exciting side projects. If you're building something interesting — let's talk.",
+      "I'm looking for internships, research collaborations, and exciting side projects. If you're building something interesting, let's talk.",
     skills: ['Internships', 'Research', 'Hackathons', 'Open Source', 'Freelance'],
     cta: 'Get in touch',
     ctaTarget: 'contact',

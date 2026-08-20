@@ -14,27 +14,27 @@ interface Achievement {
 const achievements: Achievement[] = [
   {
     id: 'presidents-list',
-    title: "President's List — 5 Semesters",
+    title: "President's List, 6 Consecutive Semesters",
     organization: 'University of Louisiana at Monroe',
     description:
-      'Maintained a perfect 4.0 GPA across five consecutive semesters, earning a spot on the President\'s List each term.',
+      'Maintained a perfect 4.0 GPA across six consecutive semesters, earning a spot on the President\'s List each term.',
     icon: 'graduation',
     accent: '#00C48C',
     bgColor: '#D1FAE5',
   },
   {
     id: 'devdays-2025',
-    title: 'Nexus First DevDays: Climate Tech 2025 — Winner',
+    title: 'Winner, Nexus First DevDays: Climate Tech 2025',
     organization: 'Nexus First / ULM',
     description:
-      'Won the inaugural DevDays hackathon focused on climate technology, building Carbon Horizon — an AI-powered emissions tracking platform.',
+      'Won the inaugural DevDays hackathon focused on climate technology, building Carbon Horizon, an AI-powered emissions tracking platform.',
     icon: 'flame',
     accent: '#FFCC2F',
     bgColor: '#FFF3B0',
   },
   {
     id: 'symposium-2025',
-    title: 'ULM Symposium 2025 — Poster Presentation Winner',
+    title: 'Poster Presentation Winner, ULM Symposium 2025',
     organization: 'University of Louisiana at Monroe',
     description:
       'Awarded first place for a poster presentation showcasing research and development work at the annual ULM Symposium.',
@@ -44,7 +44,7 @@ const achievements: Achievement[] = [
   },
   {
     id: 'techxpo-2024',
-    title: 'ULM TechXpo 2024 — Best Domain Award',
+    title: 'Best Domain Award, ULM TechXpo 2024',
     organization: 'University of Louisiana at Monroe',
     description:
       'Recognized with the Best Domain Award at TechXpo 2024 for outstanding project execution and domain expertise.',

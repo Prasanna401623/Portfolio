@@ -18,7 +18,7 @@ const projects: Project[] = [
     id: 'codesense',
     title: 'CodeSense',
     description:
-      'AI-powered code review assistant built solo — React/TypeScript frontend on Cloudflare Pages with a Hono-routed Worker backend. Architected a 4-step execution pipeline using Cloudflare Workflows and integrated Llama 3.3 70B via Workers AI for structured bug, security, and performance analysis. Implemented per-session persistent memory using Durable Objects.',
+      'AI-powered code review assistant built solo, with a React/TypeScript frontend on Cloudflare Pages and a Hono-routed Worker backend. Architected a 4-step execution pipeline using Cloudflare Workflows and integrated Llama 3.3 70B via Workers AI for structured bug, security, and performance analysis. Implemented per-session persistent memory using Durable Objects.',
     tags: ['React', 'TypeScript', 'Cloudflare', 'Hono'],
     image: '/CodeSense.png',
     link: 'https://cf-ai-codesense.pages.dev',
@@ -86,7 +86,7 @@ const projects: Project[] = [
     id: 'gunhand',
     title: 'GunHand',
     description:
-      'Gesture-controlled browser game using Google MediaPipe for real-time hand tracking — open-palm maps to crosshair movement, closed-fist fires via synthetic mouse events. Split deployment with Vue 3 on Netlify and a Node.js/Express backend on Render serving a global high-score leaderboard API. Awarded 2nd Place at the ULM Honors Symposium 2026.',
+      'Gesture-controlled browser game using Google MediaPipe for real-time hand tracking. An open palm maps to crosshair movement, and a closed fist fires via synthetic mouse events. Split deployment with Vue 3 on Netlify and a Node.js/Express backend on Render serving a global high-score leaderboard API. Awarded 2nd Place at the ULM Honors Symposium 2026.',
     tags: ['Vue 3', 'Node.js', 'MediaPipe', 'JavaScript'],
     image: '/DuckHunt.avif',
     link: 'https://virtual-duck-hunt.netlify.app',
